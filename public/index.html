@@ -1,0 +1,89 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lazy Landing Page</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar inverted">
+      <div id="logo">
+        <h3>DASHBOARD</h3>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#">
+            <i class="fa-lg f-icon fas fa-envelope"></i> Mensajes
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-lg f-icon fas fa-bell"></i> Notificación
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-lg f-icon fas fa-user"></i> Usuario
+          </a>
+        </li>
+      </ul>
+      <div class="nav-button-container">
+        <div id="nav-mobile">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Second Section -->
+    <section class="container-section" id="initial-section">
+      <div id="overlay"></div>
+      <div class="container-btn">
+        <div id="reports">
+          <i class="fa-lg f-icon fas fa-chart-pie"></i> Reportes
+        </div>
+        <div id="employees">
+          <i class="fa-lg f-icon fas fa-user-friends"></i> Empleados
+        </div>
+        <div id="calendar">
+          <i class="fa-lg f-icon far fa-calendar-alt"></i> Calendario
+        </div>
+        <div data-modal-target="#modal" id="setting">
+          <i class="fa-lg f-icon fas fa-cog"></i> Configuración
+        </div>
+      </div>
+      <!-- modal settings -->
+      <div class="modal" id="modal">
+        <div class="modal-header">
+          <div class="title">Configuracion</div>
+          <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="dark-mode-btn">
+            <i class="fa-lg f-icon fas fa-adjust"></i> Modo Oscuro
+          </div>
+        </div>
+        <p id="n-version">version 0.1</p>
+      </div>
+      <!---->
+
+      <div class="user-content">
+        <div id="mapea"></div>
+      </div>
+    </section>
+  </body>
+
+  <!-- Scripts -->
+  <script src="./lazyfunctions.js"></script>
+  <script src="./axios.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</html>
