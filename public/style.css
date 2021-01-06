@@ -5,9 +5,6 @@
   font-weight: 700;
   box-sizing: border-box;
 }
-html {
-  transition: 0.5s ease-in-out;
-}
 /*
 * --------- Navbar Styles -----------
 */
@@ -37,12 +34,20 @@ nav {
   margin-left: auto;
 }
 
+.nav-links > li {
+  opacity: 0.8;
+  transition: 0.5s;
+}
+.nav-links > li:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
 
 .nav-links > li > a {
   color: white;
   padding-right: 35px;
   text-decoration: none;
-  font-size: 16px; 
+  font-size: 16px;
 }
 
 #initial-section {
@@ -67,9 +72,7 @@ section {
   justify-content: space-between;
 }
 
-
-.container-btn
-div {
+.container-btn div {
   width: 100px;
   margin: 10px;
   text-align: start;
@@ -84,10 +87,23 @@ div {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  transition: 0.5s;
+}
+.container-btn div:hover {
+  background: #000;
+  color: white;
+  transition: 0.5s;
 }
 
 .f-icon {
   margin-right: 15px;
+}
+
+.on-web-size {
+  display: block;
+}
+.on-web-mobile {
+  display: none;
 }
 
 /* <---- modal ----> */
@@ -106,7 +122,6 @@ div {
   max-width: 80%;
 }
 .modal.active {
-  
   transform: translate(-50%, -60%) scale(1);
 }
 .modal-header {
@@ -121,6 +136,8 @@ div {
   font-weight: bold;
 }
 .modal-header .close-button {
+  max-width: max-content;
+  color: black;
   cursor: pointer;
   border: none;
   outline: none;
@@ -146,7 +163,7 @@ div {
   opacity: 1;
   pointer-events: all;
 }
-
+/* ----------------- Dark-mode ------> */
 .dark-mode-btn {
   cursor: pointer;
   max-width: max-content;
@@ -154,13 +171,11 @@ div {
 }
 
 .dark-mode {
-  filter: invert(100%);
-  transition: 0.5s ease-in-out;
+  filter: invert(1) hue-rotate(180deg);
 }
 .invert {
-  filter: invert(100%);
+  filter: invert(1) hue-rotate(180deg);
 }
-
 
 #n-version {
   padding: 20px 10px;
@@ -168,45 +183,74 @@ div {
   color: gray;
 }
 
-/* /------------> */
-
-
-
-
 /*
-* Image grid sections
+* User Card and tools section
 */
-.wrapper-grid {
-  padding-top: 60px;
+#row-card {
+  background: white;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  place-content: center;
+  padding: 30px 65px 65px 65px;
 }
 
-/*
-* ------------ Button Effect -------------
-*/
-/* .content-container > button {
-  border: 3px solid #564fcc;
-  outline: none;
-  color: #564fcc;
-  background-color: #fff;
-  padding: 16px 0px;
-  border-radius: 40px;
-  font-size: 16px;
-  width: 160px;
-  margin-top: 30px;
+.column {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  background-color: white;
+  text-align: center;
+  border-radius: 15px;
+  padding-bottom: 15px;
+  border: 1px solid;
+}
+.name {
+  padding-top: 10px;
+}
+.title {
+  color: gray;
+  padding: 5px;
+}
+button {
+  border: none;
+  padding: 8px;
+  display: inline-block;
+  color: white;
+  background-color: black;
   cursor: pointer;
-  transition: 0.5s;
+  width: 70%;
+  border-radius: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+a:hover button:hover {
+  opacity: 0.6;
 }
 
-.content-container > #button-effect:hover {
-  color: #000;
-} */
-
+.user-image {
+  width: 150px;
+  height: auto;
+  padding-top: 10px;
+}
 
 /*
-* Media Screen
+* Media Screen / Responsive Layout
 */
+@media screen and (max-width: 1400px) {
+  #row-card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media screen and (max-width: 1260px) {
   .container-btn {
     display: grid;
@@ -217,8 +261,20 @@ div {
     place-self: center;
   }
 }
+@media screen and (max-width: 1100px) {
+  #row-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.card {
+  margin: 10px 10px 0px 10px;
+  max-width: none;
+}
+.container-btn {
+  padding: 40px 120px 25px 120px;
+}
 @media screen and (max-width: 1050px) {
-  .nav-links{
+  .nav-links {
     padding-right: 10px;
   }
   .nav-links > li > a {
@@ -226,19 +282,35 @@ div {
   }
 }
 
-
 @media screen and (max-width: 900px) {
   nav {
     position: fixed;
     width: 100%;
   }
-  .nav-links{
+  .name {
+    padding-top: 0px;
+  }
+  .user-image {
+    padding-top: 0px;
+  }
+  #row-card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .nav-links {
     padding-right: 0px;
   }
   #initial-section {
     height: 100vh;
     padding-top: 10vh;
-}
+  }
+  .card {
+    display: flex;
+    padding-bottom: 0px;
+    padding: 25px;
+  }
+  .user-data {
+    width: 100%;
+  }
   .nav-button-container {
     width: 50%;
     height: auto;
@@ -276,7 +348,7 @@ div {
   .nav-links {
     position: fixed;
     background: black;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     text-align: center;
     flex-direction: column;
@@ -284,7 +356,6 @@ div {
     -webkit-clip-path: circle(50px at 90% -10%);
     transition: all 1s ease-out;
     justify-content: center;
-
   }
   .nav-links.open {
     clip-path: circle(1500px at 90% -10%);
@@ -303,8 +374,9 @@ div {
   }
   .nav-links > li > a {
     font-size: 24px;
+    padding-right: 0px;
   }
-  .container-btn{
+  .container-btn {
     padding-top: 20px;
     grid-template-columns: repeat(1, 1fr);
   }
@@ -313,8 +385,17 @@ div {
     text-align: center;
   }
 
+  .on-web-size {
+    display: none;
+  }
+  .on-web-mobile {
+    display: block;
+    color: white;
+    font-size: 24px;
+  }
+}
 
-  @media screen and (max-width: 590px) {
+@media screen and (max-width: 590px) {
   #logo {
     margin-left: 25px;
   }
@@ -333,5 +414,4 @@ div {
   .nav-links > li > a {
     font-size: 22px;
   }
-
 }

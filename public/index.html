@@ -29,9 +29,10 @@
           </a>
         </li>
         <li>
-          <a href="#">
-            <i class="fa-lg f-icon fas fa-user"></i> Usuario
-          </a>
+          <a href="#"> <i class="fa-lg f-icon fas fa-user"></i> Usuario </a>
+        </li>
+        <li class="on-web-mobile" data-modal-target="#modal" id="setting">
+          <i class="fa-lg f-icon fas fa-cog"></i> Configuración
         </li>
       </ul>
       <div class="nav-button-container">
@@ -57,7 +58,12 @@
         <div id="calendar">
           <i class="fa-lg f-icon far fa-calendar-alt"></i> Calendario
         </div>
-        <div data-modal-target="#modal" id="setting">
+        <div
+          id="settings"
+          class="on-web-size"
+          data-modal-target="#modal"
+          id="setting"
+        >
           <i class="fa-lg f-icon fas fa-cog"></i> Configuración
         </div>
       </div>
@@ -75,15 +81,12 @@
         <p id="n-version">version 0.1</p>
       </div>
       <!---->
-
-      <div class="user-content">
-        <div id="mapea"></div>
-      </div>
+      <div id="row-card"></div>
     </section>
   </body>
 
   <!-- Scripts -->
   <script src="./lazyfunctions.js"></script>
-  <script src="./axios.js"></script>
+  <script src="./fetchUser.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </html>
