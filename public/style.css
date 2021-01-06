@@ -274,11 +274,12 @@ a:hover button:hover {
   height: auto;
   padding-top: 15px;
 }
-
+.list {
+  padding-top: 20px;
+}
 .list li {
   line-height: 30px;
 }
-
 /*
 * Media Screen / Responsive Layout
 */
@@ -305,6 +306,9 @@ a:hover button:hover {
   .title-report .title-policy {
     font-size: 30px;
   }
+  .list li {
+    line-height: 35px;
+  }
 
 
 }
@@ -319,6 +323,12 @@ a:hover button:hover {
 }
 .container-btn {
   padding: 40px 120px 25px 120px;
+  }
+  .info-content {
+    margin: 20px 100px 20px 100px;
+    text-align: left;
+    padding-bottom: 40px;
+}
 }
 @media screen and (max-width: 1050px) {
   .nav-links {
@@ -440,6 +450,12 @@ a:hover button:hover {
     color: white;
     font-size: 24px;
   }
+  .info-content {
+    margin: 20px 50px 20px 50px;
+  }
+  .list li {
+    line-height: 42px;
+  }
 }
 
 @media screen and (max-width: 590px) {
@@ -463,6 +479,13 @@ a:hover button:hover {
   }
   .card {
     display: block;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .card {
+    margin: 0px;
     border-radius: 0;
+
   }
 }

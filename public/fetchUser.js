@@ -2,7 +2,7 @@ const getEmployees = document.getElementById("employees");
 
 let fetchData = () => {
   axios
-    .get("https://randomuser.me/api/?results=10")
+    .get("https://randomuser.me/api/?results=20")
     .then((res) => {
       console.log(res.data.results);
       const mapData = res.data.results
@@ -34,10 +34,10 @@ let fetchData = () => {
     .catch((err) => {
       console.log(err);
     });
-}
+};
 
 window.onload = () => {
-  fetchData()
-}
+  fetchData();
+};
 
 getEmployees.addEventListener("click", fetchData);
