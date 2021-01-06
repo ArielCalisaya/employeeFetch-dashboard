@@ -1,7 +1,6 @@
 const getEmployees = document.getElementById("employees");
-const postBtn = document.getElementById("post-btn");
 
-const getData = () => {
+let fetchData = () => {
   axios
     .get("https://randomuser.me/api/?results=10")
     .then((res) => {
@@ -20,7 +19,9 @@ const getData = () => {
             <h1 class="name">${result.name.first} ${result.name.last}  </h1>
             <div class="title">${result.location.country}</div>
             <p>${result.email}</p>
-            <button style="
+            <p style="
+            margin-top: 10px" >${result.phone}</p>
+            <button class="button-info" style="
             margin-top: 20px" 
             >Info</button>
             </div>
@@ -33,6 +34,10 @@ const getData = () => {
     .catch((err) => {
       console.log(err);
     });
-};
+}
 
-getEmployees.addEventListener("click", getData);
+window.onload = () => {
+  fetchData()
+}
+
+getEmployees.addEventListener("click", fetchData);

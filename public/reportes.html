@@ -50,22 +50,27 @@
       <div id="overlay"></div>
       <div class="container-btn">
         <button id="reports" onclick="location.href='./reportes.html'">
-            <i class="fa-lg f-icon fas fa-chart-pie"></i> Reportes
+          <i class="fa-lg f-icon fas fa-chart-pie reportes-selected"></i>
+          Reportes
         </button>
-        <button  id="employees" onclick="location.href='./index.html'">
+        <button id="employees" onclick="location.href='./index.html'">
           <i class="fa-lg f-icon fas fa-user-friends"></i> Empleados
-        </button  >
-        <button  id="calendar" onclick="location.href='./politicas.html'">
+        </button>
+        <button id="calendar" onclick="location.href='./politicas.html'">
           <i class="fa-lg f-icon fas fa-virus"></i> Seguridad
-        </button  >
-        <button 
+        </button>
+        <button
           id="settings"
           class="on-web-size"
           data-modal-target="#modal"
           id="setting"
         >
           <i class="fa-lg f-icon fas fa-cog"></i> Configuración
-        </button  >
+        </button>
+      </div>
+      <div class="reportes">
+        <h1 class="title-report">Estructura de Proyecto Jan-06</h1>
+        <img src="./assets/frontend.png" alt="">
       </div>
       <!-- modal settings -->
       <div class="modal" id="modal">
@@ -87,6 +92,5 @@
 
   <!-- Scripts -->
   <script src="./lazyfunctions.js"></script>
-  <script src="./fetchUser.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </html>
