@@ -8,8 +8,8 @@
       integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Lazy Landing Page</title>
+    <link rel="stylesheet" href="../style.css" />
+    <title>DASHBOARD.SH</title>
   </head>
   <body>
     <!-- Navbar -->
@@ -53,7 +53,7 @@
           <i class="fa-lg f-icon fas fa-chart-pie reportes-selected"></i>
           Reportes
         </button>
-        <button id="employees" onclick="location.href='./index.html'">
+        <button id="employees" onclick="location.href='../index.html'">
           <i class="fa-lg f-icon fas fa-user-friends"></i> Empleados
         </button>
         <button id="calendar" onclick="location.href='./politicas.html'">
@@ -68,50 +68,9 @@
           <i class="fa-lg f-icon fas fa-cog"></i> Configuración
         </button>
       </div>
-      <div class="politicas">
-        <h1 class="title-policy">Politicas SARS-CoV-2</h1>
-
-        <div class="info-content">
-          <p class="paragraph1">
-            Política de seguridad y salud en el trabajo en tiempos de pandemia
-            Para preparar los lugares de trabajo y reducir la propagación del
-            contagio, la Administración de Seguridad y Salud Ocupacional de
-            Estados Unidos (OSHA) recomienda incluir dentro del sistema de
-            gestión de higiene y seguridad el desarrollo y ejecución de un plan
-            de preparación y respuesta contra enfermedades infecciosas. Y entre
-            los protocolos básicos específicos para combatir el nuevo
-            coronavirus en el ámbito laboral se encuentran:
-          </p>
-          <div class="list">
-            <li>
-              Capacitación sobre la enfermedad y las formas de propagación. Esto
-              ayudará a que los trabajadores ejecuten medidas de protección
-              -como no tocarse ojos, nariz y boca-, o toser y estornudar
-              cubriéndose la boca y la nariz con el codo doblado o con un
-              pañuelo desechable.
-            </li>
-            <li>
-              Dotar a los empleados de los elementos de bioseguridad necesarios
-              para prevenir contagios.
-            </li>
-            <li>
-              Implementar dentro del SG-SST, el lavado de manos profundo y con
-              frecuencia durante la jornada, usando un desinfectante a base de
-              alcohol o con agua y jabón.
-            </li>
-            <li>
-              Mantener una distancia mínima de 1 metro entre los trabajadores.
-            </li>
-            <li>
-              Desinfección periódica de instalaciones y utensilios de trabajo.
-            </li>
-            <li>
-              Implementar mecanismos para airear las zonas de trabajo, como
-              ventiladores y ventanas.
-            </li>
-            <li>Supervisión del estado de salud de los trabajadores.</li>
-          </div>
-        </div>
+      <div class="reportes">
+        <h1 class="title-report">Estructura de Proyecto Jan-06</h1>
+        <img src="../assets/frontend.png" alt="" />
       </div>
       <!-- modal settings -->
       <div class="modal" id="modal">
@@ -127,10 +86,13 @@
         <p id="n-version">version 0.1</p>
       </div>
       <!---->
+      <div id="row-card"></div>
     </section>
   </body>
 
   <!-- Scripts -->
-  <script src="./lazyfunctions.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Scripts -->
+    <script src="../js/lazyfunctions.js"></script>
+    <script src="../js/dark-theme.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </html>

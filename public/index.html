@@ -9,11 +9,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Lazy Landing Page</title>
+    <title>DASHBOARD.SH</title>
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar inverted">
+    <nav class="navbar ">
       <div id="logo">
         <h3>DASHBOARD.SH</h3>
       </div>
@@ -49,13 +49,13 @@
     <section class="container-section" id="initial-section">
       <div id="overlay"></div>
       <div class="container-btn">
-        <button id="reports" onclick="location.href='./reportes.html'">
+        <button id="reports" onclick="location.href='./pages/reportes.html'">
           <i class="fa-lg f-icon fas fa-chart-pie"></i> Reportes
         </button>
         <button id="employees" onclick="location.href='./index.html'">
           <i class="fa-lg f-icon fas fa-user-friends"></i> Empleados
         </button>
-        <button id="calendar" onclick="location.href='./politicas.html'">
+        <button id="calendar" onclick="location.href='./pages/politicas.html'">
           <i class="fa-lg f-icon fas fa-virus"></i> Seguridad
         </button>
         <button
@@ -86,7 +86,8 @@
   </body>
 
   <!-- Scripts -->
-  <script src="./lazyfunctions.js"></script>
-  <script src="./fetchUser.js"></script>
+  <script src="./js/lazyfunctions.js"></script>
+  <script src="./js/fetchUser.js"></script>
+  <script src="./js/dark-theme.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </html>
